@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Vaga - TOK Contábil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Detalhes da Vaga</h1>
+            <p>Auxiliar Contábil - TOK Contábil</p>
+        </div>
+    </section>
+
+    <!-- Job Details -->
+    <section class="job-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3>📋 Requisitos</h3>
+                    <ul>
+                        <li>Ter raciocínio lógico</li>
+                        <li>Conhecimento básico de informática</li>
+                        <li>Boa comunicação</li>
+                        <li>Saber negociar e processar informações</li>
+                        <li>Ter espírito de equipe</li>
+                        <li>Ter pensamento estratégico</li>
+                        <li>Ser ético</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>🎯 Responsabilidades</h3>
+                    <ul>
+                        <li>Auxílio ao contador responsável nas demandas do setor</li>
+                        <li>Atendimento a clientes internos e externos</li>
+                        <li>Lançamento e conferência de notas fiscais</li>
+                        <li>Suporte na análise de retenções de tributos</li>
+                        <li>Suporte na escrituração contábil</li>
+                        <li>Auxílio na preparação de relatórios financeiros</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>💼 Soft Skills</h3>
+                    <ul>
+                        <li>Resiliência</li>
+                        <li>Gestão de tempo</li>
+                        <li>Adaptabilidade</li>
+                        <li>Ética e integridade</li>
+                        <li>Produtividade</li>
+                        <li>Comunicação eficaz</li>
+                        <li>Atenção aos detalhes</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>🛠️ Hard Skills</h3>
+                    <ul>
+                        <li>Pacote Office</li>
+                        <li>Notas fiscais</li>
+                        <li>Curso técnico ou superior em Contabilidade/Administração</li>
+                        <li>Legislação contábil e tributária (básico)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diferenciais">
+                <h3>🌟 Diferenciais</h3>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-item">Domínio em Pacote Excel (Intermediário a Avançado)</div>
+                    <div class="diferencial-item">Conhecimento em Sistema ERP</div>
+                    <div class="diferencial-item">Gestão em Planilhas</div>
+                    <div class="diferencial-item">Manipulação de Dados</div>
+                    <div class="diferencial-item">Atendimento Público</div>
+                    <div class="diferencial-item">Emissão de Notas Fiscais</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Benefícios</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">🚌 VT + VR</div>
+                <div class="benefit-item">🛡️ Seguro de vida</div>
+                <div class="benefit-item">💳 Vale-transporte</div>
+                <div class="benefit-item">🏥 Assistência médica</div>
+                <div class="benefit-item">🦷 Assistência odontológica</div>
+                <div class="benefit-item">🎂 Folga de aniversário</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas -->
+    <section class="areas">
+        <div class="container">
+            <h2>Áreas de Atuação</h2>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h3>📊 Auditoria</h3>
+                    <p>Fiscaliza as contas da empresa, conferindo os registros nos livros e os dados de balanço.</p>
+                </div>
+                <div class="area-card">
+                    <h3>💼 Contabilidade Gerencial</h3>
+                    <p>Registra e analisa as operações financeiras e patrimoniais da empresa, fornecendo dados para tomada de decisões.</p>
+                </div>
+                <div class="area-card">
+                    <h3>🔍 Controle e Perícia</h3>
+                    <p>Coordena as operações fiscais e financeiras tanto de empresas privadas quanto públicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Interessado na vaga?</h2>
+            <p>Teste seu perfil ou candidate-se agora mesmo</p>
+            <div class="cta-buttons">
+                <a href="quiz.html" class="cta-button secondary">Fazer Quiz de Perfil</a>
+                <a href="candidatura.html" class="cta-button">Candidatar-se Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
