@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Perfil - TOK Contábil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Quiz de Perfil</h1>
+            <p>Descubra se você tem o perfil para a vaga de Auxiliar Contábil</p>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <div class="quiz-intro">
+                <h2>Teste seus conhecimentos</h2>
+                <p>Responda as 8 questões abaixo para avaliar seu perfil para a vaga. As questões abordam conhecimentos em contabilidade, matemática e situações do dia a dia profissional.</p>
+            </div>
+            
+            <div id="quiz-container" class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="progress-text">Pergunta 1 de 8</span>
+                </div>
+                
+                <div id="quiz-content">
+                    <!-- Quiz questions will be loaded here by JavaScript -->
+                </div>
+                
+                <div class="quiz-navigation">
+                    <button id="prev-btn" class="nav-btn" disabled>Anterior</button>
+                    <button id="next-btn" class="nav-btn">Próxima</button>
+                    <button id="submit-btn" class="nav-btn submit-btn" style="display: none;">Ver Resultado</button>
+                </div>
+            </div>
+            
+            <div id="quiz-result" class="quiz-result" style="display: none;">
+                <!-- Result will be shown here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+            
+            // Initialize quiz
+            initializeQuiz();
+        });
+    </script>
+</body>
+</html>
