@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOK Contábil - Vaga Auxiliar Contábil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Vaga: Auxiliar Contábil</h1>
+            <p class="hero-subtitle">Junte-se à equipe da TOK Contábil e desenvolva sua carreira</p>
+            
+            <div class="hero-info">
+                <div class="info-card">
+                    <h3>📍 Localização</h3>
+                    <p>Av. José Rocha Bomfim, 214 - 130 - Jardim Santa Genebra</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Salário</h3>
+                    <p>R$ 1.989,80 / mês</p>
+                </div>
+                <div class="info-card">
+                    <h3>⏰ Carga Horária</h3>
+                    <p>44h semanais - Segunda a Sexta</p>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="vaga.html" class="cta-button">Ver Detalhes da Vaga</a>
+                <a href="quiz.html" class="cta-button secondary">Fazer Quiz de Perfil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="quick-info">
+        <div class="container">
+            <h2>Por que trabalhar na TOK Contábil?</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>🎯 Oportunidade de Crescimento</h3>
+                    <p>Desenvolva suas habilidades em um ambiente profissional e construtivo</p>
+                </div>
+                <div class="info-item">
+                    <h3>📚 Aprendizado Contínuo</h3>
+                    <p>Tenha acesso a treinamentos e desenvolvimento profissional</p>
+                </div>
+                <div class="info-item">
+                    <h3>🤝 Ambiente Colaborativo</h3>
+                    <p>Trabalhe em equipe com profissionais experientes e dedicados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="next-steps">
+        <div class="container">
+            <h2>Próximos Passos</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Conheça a Vaga</h3>
+                    <p>Veja todos os detalhes sobre requisitos e responsabilidades</p>
+                    <a href="vaga.html" class="step-link">Saiba mais →</a>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Teste seu Perfil</h3>
+                    <p>Responda nosso quiz e descubra se você tem o perfil ideal</p>
+                    <a href="quiz.html" class="step-link">Fazer quiz →</a>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Candidatar-se</h3>
+                    <p>Envie seu currículo e dê o primeiro passo na sua carreira</p>
+                    <a href="candidatura.html" class="step-link">Candidatar-se →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load components
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
