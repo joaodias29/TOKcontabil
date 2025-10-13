@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatar-se - TOK Contábil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Candidatar-se à Vaga</h1>
+            <p>Auxiliar Contábil - TOK Contábil</p>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application">
+        <div class="container">
+            <div class="application-info">
+                <h2>Preencha o formulário abaixo</h2>
+                <p>Envie seus dados e currículo para concorrer à vaga de Auxiliar Contábil</p>
+            </div>
+
+            <form id="application-form" class="application-form">
+                <div class="form-section">
+                    <h3>Dados Pessoais</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cidade">Cidade *</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Experiência e Formação</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="formacao">Formação Acadêmica *</label>
+                            <select id="formacao" name="formacao" required>
+                                <option value="">Selecione...</option>
+                                <option value="tecnico">Técnico em Contabilidade</option>
+                                <option value="superior-cursando">Superior em Andamento</option>
+                                <option value="superior-completo">Superior Completo</option>
+                                <option value="pos-graduacao">Pós-Graduação</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experiencia">Experiência na Área *</label>
+                            <select id="experiencia" name="experiencia" required>
+                                <option value="">Selecione...</option>
+                                <option value="nenhuma">Nenhuma experiência</option>
+                                <option value="ate-1ano">Até 1 ano</option>
+                                <option value="1-3anos">1 a 3 anos</option>
+                                <option value="3-5anos">3 a 5 anos</option>
+                                <option value="5+anos">Mais de 5 anos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="conhecimentos">Conhecimentos Específicos</label>
+                        <textarea id="conhecimentos" name="conhecimentos" rows="3" placeholder="Descreva seus conhecimentos em Excel, sistemas ERP, notas fiscais, etc..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Documentos</h3>
+                    <div class="form-group">
+                        <label for="curriculo">Currículo (PDF) *</label>
+                        <input type="file" id="curriculo" name="curriculo" accept=".pdf" required>
+                        <small>Tamanho máximo: 5MB</small>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Mensagem</h3>
+                    <div class="form-group">
+                        <label for="mensagem">Carta de Apresentação</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre você, suas expectativas e por que se interessou por esta vaga..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enviar Candidatura</button>
+                    <p class="form-note">* Campos obrigatórios</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="next-steps">
+        <div class="container">
+            <h2>Próximos Passos Após a Candidatura</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Análise do Currículo</h3>
+                    <p>Nossa equipe analisará seu perfil em até 5 dias úteis</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Contato</h3>
+                    <p>Entraremos em contato por e-mail ou telefone</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Processo Seletivo</h3>
+                    <p>Agendamento de entrevistas e testes práticos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
